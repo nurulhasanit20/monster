@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
+import { CardList } from './components/card-list/card-list.component';
 import './App.css';
 class App extends Component {
   constructor(){
@@ -8,15 +8,15 @@ class App extends Component {
       monsters: [
         {
           name: 'Hassan',
-          id:1
+          id:'asc1'
         },
         {
           name: 'dell',
-          id:2
+          id:'asc2'
         },
         {
           name: 'Markov',
-          id:3
+          id:'asc3'
         }
       ]
     };
@@ -31,6 +31,9 @@ class App extends Component {
   render(){
     return(
       <div className="App">
+        <CardList name='Nurul'>
+        <h1>Nurul</h1>
+        </CardList>
       {this.state.monsters.map(monster => (
       <h1 key={monster.id}>{monster.name}</h1>
     ))}
